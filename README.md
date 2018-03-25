@@ -1,3 +1,6 @@
+Application Configuration:
+After download npm install is needed and then npm start in the console. 
+
 # ScssStyle
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
