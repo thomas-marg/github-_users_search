@@ -1,0 +1,44 @@
+@import '../../theming';
+
+input[type=text] {
+	padding: 1em;
+	font-size: 17px;
+	width: 100%;
+	border: 1px solid $input_border;
+	border-radius: 4px;
+	resize: vertical;
+	box-shadow: 2px 4px $input_shadow;
+}
+.result {
+	padding-top: 20px;
+    border-bottom: 1px solid $gray;
+    &__thumbnail {
+        display: inline-block;
+        max-width: 100%;
+        min-width: 100%;
+        height: auto;
+        padding: 4px;
+        line-height: 1.42857143;
+        background-color: $white;
+        border: 1px solid $thumbnail_border;
+        border-radius: 4px;
+        }
+    &__details {
+        padding: 10px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+label {
+	background: $white;
+	border: 1px solid $black;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 1px 1px 1px 1px $gray;
+	margin-left: 5px;
+}
+
+    
+

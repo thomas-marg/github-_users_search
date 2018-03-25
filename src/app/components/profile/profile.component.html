@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row" *ngIf="searchRes">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <img class="img-thumbnail" src="{{searchRes.avatar_url}}" alt="photo"> 
+        </div>
+        <div class="col-md-8 col-sm-12 profile">
+            <div class="profile__github">
+                <label>{{searchRes.public_repos}} Public Repos</label>
+                <label>{{searchRes.public_gists}} Public Gists</label>
+                <label>{{searchRes.followers}} Followers</label>
+                <label>{{searchRes.following}} Following</label>
+            </div>
+            <div class="profile__information">
+                <span class="profile__information__item"><strong>Username: </strong>{{searchRes.login}}</span>
+                <span class="profile__information__item"><strong>Location: </strong>{{searchRes.location}}</span> 
+                <span class="profile__information__item"><strong>Email: </strong>{{searchRes.email}}</span> 
+                <span class="profile__information__item"><strong>Blog: </strong>{{searchRes.blog}}</span> 
+                <span class="profile__information__item"><strong>Member Since: </strong>{{searchRes.created_at}}</span>
+            </div>
+        </div>   
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="unit-title">
+                <p>Repositories</p>
+            </div>
+            <div *ngIf="repositoryRes">
+                <div *ngFor='let repository of repositoryRes'>
+                    <a target="_blank" href="{{repository.html_url}}"><h3>{{repository.name}}</h3></a>
+                    <p>{{repository.description}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="unit-title">
+                <p>Followers</p>
+            </div>
+            <div *ngIf="followersRes">
+                <div *ngFor='let follower of followersRes'>
+                    <h3>{{follower.login}}</h3>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+

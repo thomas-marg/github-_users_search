@@ -1,0 +1,22 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <input type="text" placeholder="A quien estás buscando...." [(ngModel)]="searchStr" name="searchStr" (keyup)="getUsers()">
+        </div>
+    </div>
+</div>
+
+<div class="container"  *ngIf="searchRes">
+    <div class="row">
+        <div class="col-md-3 col-xs-12 result" *ngFor="let user of searchRes">
+            <div>
+                <a routerLink="/user-profile/{{user.login}}"><img class="result__thumbnail" src="{{user.avatar_url}}"></a>
+            </div>  
+            <div class="result__details">
+                <span><a routerLink="/user-profile/{{user.login}}">{{user.login}}</a></span>
+            </div>  
+        </div>
+    </div>
+</div>    
+

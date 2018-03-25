@@ -1,0 +1,37 @@
+@import '../../theming';
+
+.profile {
+    padding-top: 20px;
+
+    &__information{
+        padding-top:20px;
+
+        &__item{
+            float: left;
+            clear: left;
+            padding-top: 3px;
+        }
+    }
+    
+    &__github {
+        padding-right: 5px;
+        display: block;
+        overflow: hidden;
+        
+        label {
+            background: $white;
+            border: 1px solid $label_border_color;
+            padding: 3px;
+            margin-right: 5px;
+            border-radius: 4px;
+            box-shadow: 1px 1px 1px 1px $gray;
+        }
+    }
+}
+
+.unit-title {
+	padding-top: 20px;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+}
