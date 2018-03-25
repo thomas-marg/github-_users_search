@@ -1,5 +1,5 @@
 Application Configuration:
-After download npm install is needed and then npm start in the console. 
+After download run the command npm install in order to install the node modules. 
 
 # ScssStyle
 
